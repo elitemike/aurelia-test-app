@@ -1,0 +1,13 @@
+{
+  "name": "@test-packages/package-1",
+  "description": "An Aurelia client application.",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src"
+  ]
+}

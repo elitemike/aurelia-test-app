@@ -1,0 +1,18 @@
+{
+  "name": "aurelia-workspace",
+  "description": "An Aurelia client application.",
+  "version": "0.1.0",
+  "workspaces": [
+    "applications/**",
+    "packages/**"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@goldstack/utils-typescript-references": "^0.3.4"
+  },
+  "scripts": {
+    "fix-typescript-references": "utils-typescript-references",
+    "bootstrap": "npm install -g typescript && yarn install && yarn workspaces foreach -ptv run build",
+    "build-all": "yarn workspaces foreach -ptv run build"
+  }
+}

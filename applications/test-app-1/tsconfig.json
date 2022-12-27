@@ -1,0 +1,25 @@
+{
+  "extends": "../../tsconfig",
+  "compileOnSave": true,
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": ".",
+    "outDir": "./dist",
+    "sourceRoot": "src",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "src/*"
+      ]
+    },
+  },
+  "references": [
+    {
+      "path": "../../packages/dep1"
+    }
+  ],
+  "include": [
+    "src/**/*.ts",
+    "config/*.json"
+  ]
+}

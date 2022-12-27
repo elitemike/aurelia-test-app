@@ -1,0 +1,47 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "esnext",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "removeComments": true,
+    "rootDir": ".",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "target": "es5",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "allowJs": true,
+    "composite": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@test-app-1": [
+        "/src"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "test"
+  ],
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "references": [
+    {
+      "path": "applications/test-app-1"
+    },
+    {
+      "path": "packages/dep1"
+    }
+  ]
+}
