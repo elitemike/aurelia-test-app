@@ -1,5 +1,5 @@
 import { autoinject } from 'aurelia-framework';
-import { Utils } from "@test-packages/package-1";
+import { Utils } from "@packages/dep1";
 import { SomeStuff } from 'someStuff';
 
 @autoinject

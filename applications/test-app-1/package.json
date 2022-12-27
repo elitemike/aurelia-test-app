@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@test-packages/package-1": "0.1.0",
+    "@packages/dep1": "0.1.0",
     "aurelia-animator-css": "^1.0.4",
     "aurelia-bootstrapper": "^2.4.0"
   },
@@ -57,7 +57,8 @@
     "start": "webpack server",
     "build:dev": "webpack",
     "analyze": "webpack --env production --analyze",
-    "test": "au test"
+    "test": "au test",
+    "watch": "webpack server"
   },
   "engines": {
     "node": ">=14.15.0"

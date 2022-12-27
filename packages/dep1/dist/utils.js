@@ -1,3 +1,4 @@
+import { Strings } from "@packages/dep2";
 var Utils = (function () {
     function Utils() {
     }
@@ -12,6 +13,14 @@ var Utils = (function () {
     };
     Utils.subtract = function (num1, num2) {
         return num1 - num2;
+    };
+    Utils.square = function (num1) {
+        var n = num1;
+        var f = n;
+        return num1 * num1;
+    };
+    Utils.someString = function (a, b) {
+        return Strings.concatWithSpace(a, b);
     };
     return Utils;
 }());

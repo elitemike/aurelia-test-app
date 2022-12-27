@@ -1,5 +1,8 @@
+import { Utils } from "@packages/dep1"
 export class SomeStuff {
+
+
   public showIt() {
-    return "show it from injected class";
+    return Utils.someString("John", "Doe");
   }
 }

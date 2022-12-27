@@ -2,14 +2,15 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Chrome",
-      "type": "chrome",
+      "name": "Launch Edge",
       "request": "launch",
+      "type": "msedge",
       "url": "http://localhost:8080",
-      "webRoot": "${workspaceRoot}/src",
-      "userDataDir": "${workspaceRoot}/.chrome",
+      "webRoot": "${workspaceRoot}",
+      "trace": true,
       "sourceMapPathOverrides": {
-        "webpack://${workspaceFolderBasename}/./src/*": "${webRoot}/*"
+        "webpack:///${workspaceRoot}/packages/*": "${webRoot}/packages/*",
+        "webpack://test-app/../../packages/*": "${webRoot}/packages/*"
       }
     }
   ]

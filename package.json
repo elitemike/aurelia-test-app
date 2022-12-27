@@ -8,11 +8,18 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@goldstack/utils-typescript-references": "^0.3.4"
+    "@goldstack/utils-typescript-references": "^0.3.4",
+    "cpx": "^1.5.0",
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "wsrun": "^5.2.4"
   },
   "scripts": {
     "fix-typescript-references": "utils-typescript-references",
-    "bootstrap": "npm install -g typescript && yarn install && yarn workspaces foreach -ptv run build",
-    "build-all": "yarn workspaces foreach -ptv run build"
+    "bootstrap": "npm install -g typescript && yarn install && yarn build-all",
+    "build": "yarn wsrun -m --stages build",
+    "watch:test-app": "yarn wsrun -p test-app --stages --done-criteria=\"Found 0 errors. Watching for file changes.\" -r watch",
+    "watch": "yarn workspaces foreach -pvi run watch"
   }
 }

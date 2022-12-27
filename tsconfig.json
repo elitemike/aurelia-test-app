@@ -42,6 +42,9 @@
     },
     {
       "path": "packages/dep1"
+    },
+    {
+      "path": "packages/dep2"
     }
   ]
 }
