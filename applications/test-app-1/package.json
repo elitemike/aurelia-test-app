@@ -10,7 +10,9 @@
   "dependencies": {
     "@packages/dep1": "0.1.0",
     "aurelia-animator-css": "^1.0.4",
-    "aurelia-bootstrapper": "^2.4.0"
+    "aurelia-bootstrapper": "^2.4.0",
+    "aurelia-framework": "1.4.1",
+    "aurelia-pal": "^1.8.2"
   },
   "devDependencies": {
     "@types/jest": "^27.5.1",

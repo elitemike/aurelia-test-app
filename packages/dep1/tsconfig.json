@@ -4,13 +4,15 @@
     "composite": true,
     "rootDir": "src",
     "outDir": "dist",
-    "sourceRoot": "src",
     "baseUrl": ".",
     "paths": {
       "*": [
         "src/*"
       ]
-    }
+    },
+    "sourceRoot": "src",
+    "target": "ES2017",
+    "module": "ESNext"
   },
   "include": [
     "src",

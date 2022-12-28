@@ -25,6 +25,6 @@ export class Utils {
   }
 
   public static someString(a, b) {
-    return `from util class.. ${Strings.concatWithSpace(a, b)}`;
+    return `${Strings.concatWithSpace(a, b)}`;
   }
 }

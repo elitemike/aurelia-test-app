@@ -28,7 +28,7 @@ const cssRules = [
 module.exports = ({ production }, { analyze, hmr, port, host }) => ({
   resolve: {
     extensions: ['.ts', '.js'],
-    modules: [srcDir, 'node_modules', '../../node_modules'],
+    modules: [srcDir, 'node_modules'],
     symlinks: false
   },
   entry: {
@@ -42,7 +42,7 @@ module.exports = ({ production }, { analyze, hmr, port, host }) => ({
   output: {
     path: outDir,
     publicPath: baseUrl,
-    filename: '[name].js',
+    filename: production ? '[name].[chunkhash].bundle.js' : '[name].[fullhash].bundle.js',
     chunkFilename: production ? '[name].[chunkhash].chunk.js' : '[name].[fullhash].chunk.js'
   },
   optimization: {
@@ -181,7 +181,7 @@ module.exports = ({ production }, { analyze, hmr, port, host }) => ({
     port: port || project.platform.port,
     host: host
   },
-  devtool: 'source-map',
+  devtool: production ? undefined : 'source-map',
   module: {
     rules: [
       // CSS required in JS/TS files should use the style-loader that auto-injects it into the website

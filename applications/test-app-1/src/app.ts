@@ -4,11 +4,12 @@ import { SomeStuff } from 'someStuff';
 
 @autoinject
 export class App {
-
   constructor(private someStuff: SomeStuff) {
 
   }
 
-  //public message = "basic working";
-  public message = `yarn 2! workspaces ${Utils.add(5, 7)}  --- ${this.someStuff.showIt()}`;
+  num1 = 5;
+  num2 = 7;
+
+  public message = `yarn 2! workspaces ${this.num1} + ${this.num2} = ${Utils.add(5, 7)} --- Name from another package ${this.someStuff.showIt()}`;
 }
