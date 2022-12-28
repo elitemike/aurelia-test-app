@@ -2,6 +2,21 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceRoot}",
+      "userDataDir": "${workspaceRoot}/.chrome",
+      "trace": true,
+      "sourceMapPathOverrides": {
+        "webpack:///${workspaceRoot}/packages/*": "${webRoot}/packages/*",
+        "webpack://test-app/../../packages/*": "${webRoot}/packages/*",
+        "webpack:///./src/*": "${webRoot}/applications/test-app/src/*",
+        "webpack://test-app/./src/*": "${webRoot}/applications/test-app/src/*"
+      }
+    },
+    {
       "name": "Launch Edge",
       "request": "launch",
       "type": "msedge",
@@ -10,7 +25,9 @@
       "trace": true,
       "sourceMapPathOverrides": {
         "webpack:///${workspaceRoot}/packages/*": "${webRoot}/packages/*",
-        "webpack://test-app/../../packages/*": "${webRoot}/packages/*"
+        "webpack://test-app/../../packages/*": "${webRoot}/packages/*",
+        "webpack:///./src/*": "${webRoot}/applications/test-app-1/src/*",
+        "webpack://test-app/./src/*": "${webRoot}/applications/test-app-1/src/*"
       }
     }
   ]

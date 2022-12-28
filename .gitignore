@@ -41,6 +41,6 @@ node_modules
 # Compiled files
 /scripts
 /src/environment.ts
-/dist
-/test/coverage-jest
+**/dist
+**/test/coverage-jest
 packages/**/tsconfig.tsbuildinfo
