@@ -17,7 +17,7 @@
   },
   "scripts": {
     "fix-typescript-references": "utils-typescript-references",
-    "bootstrap": "npm install -g typescript && yarn install && yarn build-all",
+    "bootstrap": "npm install -g typescript && yarn install && yarn build",
     "build": "yarn wsrun -m --stages build",
     "watch:test-app": "yarn wsrun -p test-app --stages --done-criteria=\"Found 0 errors. Watching for file changes.\" -r watch",
     "watch": "yarn workspaces foreach -pvi run watch"
