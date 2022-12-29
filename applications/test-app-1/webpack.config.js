@@ -200,7 +200,7 @@ module.exports = ({ production }, { analyze, hmr, port, host }) => ({
       },
       // Skip minimize in production build to avoid complain on unescaped < such as
       // <span>${ c < 5 ? c : 'many' }</span>
-      { test: /\.html$/i, loader: 'html-loader', options: { minimize: false } },
+      { test: /\.html$/i, loader: 'html-loader', options: { minimize: false, esModule: false } },
       { test: /\.ts$/, loader: "ts-loader" },
       // embed small images and fonts as Data Urls and larger ones as files:
       { test: /\.(png|svg|jpg|jpeg|gif)$/i, type: 'asset' },
